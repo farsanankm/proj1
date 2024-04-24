@@ -9,16 +9,31 @@ import Proj2 from './Component/Proj2';
 import image1 from '../src/Component/images/kalpana.jpeg'
 import image2 from '../src/Component/images/rithu.jpeg'
 import image3 from '../src/Component/images/th.jpeg'
+import { useState } from 'react';
 
 
 function App() {
 
 
   const [name,setName]  =useState("")
+  const [age,setAge] =useState("")
     function handlessubmit(e){
         e.preventDefault()
-        console.log(name);
+    let data = {
+      name:{name},
+      age:{age}
     }
+    console.log(data);
+    }
+  
+  // const[age, setAge]=useState("")
+//   const[name,setName]=useState("")
+//  console.log(age);
+//  console.log(name);
+  // const [number, setNumber]=useState(0)
+  // console.log(number);
+
+
 
   const data = [
 
@@ -82,19 +97,28 @@ function App() {
        <Project1 data={data}/>
        <Proj2 data={data} 
        */}
-       <div>
-        <form onClick={handlessubmit} action="">
-        <label htmlFor="">name</label>
+       { <div>
+        <form onSubmit={handlessubmit} action="">
+        <label htmlFor="">name</label> 
         <input type="text"
         onChange={(e)=>setName(e.target.value)}
-        />
+        />""
+        <label>age</label>
+        <input type="text"
+        onChange={(e)=>setAge(e.target.value)}></input>
         <input type="submit"/>
         </form>
 
     </div>
-    
+    }
+    {/* <button onClick={()=>setNumber(number+1)}>increment</button>
+    <button onClick={()=>setNumber(number-1)}>decrement</button>
+    {number}
+        */}
        
     </div>
+   
+
   );
 }
 

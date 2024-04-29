@@ -10,21 +10,35 @@ import image1 from '../src/Component/images/kalpana.jpeg'
 import image2 from '../src/Component/images/rithu.jpeg'
 import image3 from '../src/Component/images/th.jpeg'
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 
-function App() {
+// function App() {
 
 
-  const [name,setName]  =useState("")
-  const [age,setAge] =useState("")
-    function handlessubmit(e){
-        e.preventDefault()
-    let data = {
-      name:{name},
-      age:{age}
-    }
-    console.log(data);
-    }
+  // const [name,setName]  =useState("")
+  // const [age,setAge] =useState("")
+  //   function handlessubmit(e){
+  //       e.preventDefault()
+  //   let data = {
+  //     name:{name},
+  //     age:{age}
+  //   }
+  //   console.log(data);
+  
+      // const[count,setcount]=useState(0);
+      // useEffect(()=>{
+      //     setTimeout(()=>{
+      //         setcount((count)=>count+1);
+  
+      //     },1000);
+      // });
+      
+     
+      
+  // }
+  
+    // }
   
   // const[age, setAge]=useState("")
 //   const[name,setName]=useState("")
@@ -32,51 +46,67 @@ function App() {
 //  console.log(name);
   // const [number, setNumber]=useState(0)
   // console.log(number);
+  function App(){
+    // const[count,setcount]=useState(0);
+    // useEffect(()=>{
+    //     setTimeout(()=>{
+    //         setcount((count)=>count+1);
+
+    //     },1000);
+    // },[]);
+    const[count,setcount]=useState(0);
+    const[calculation,setcalculation]=useState(0);
+    useEffect(()=>{
+      setcalculation(()=>count*2);
+    });
+   
+    
 
 
 
-  const data = [
 
-    {
-      id: 1,
-      name: "Kalpana Chawla",
-      img : image1,
-      description:"Kalpana Chawla was an indian born American astronautand aerospace engineer who was the first women of india originto fly to space . she first flew on space shuttle columbia in1997 as a mission specialist and primary robotic arm operator aboard STS-87.Kalpana Chawla was an indian born American astronautand aerospace engineer who was the first women of india originto fly to space Kalpana Chawla was an indian born American astronautand aerospace engineer who was the first women of india originto fly to space"
-    },
+//   const data = [
 
-    {
-      id: 2,
-      name: "Ritu Karidhal",
-      img : image2,
-      description: "Ritu Karidhal Srivastava is an Indian scientist and aerospace engineer working in the Indian Space Research Organisation(ISRO).She was a Deputy Operations Director to India's Mars orbitalmission, Mangalyaan.She has been referred to as one of the many Rocket Womem of India.Giving tribute to her excellence in Mangalayaan mission, a Bollywood film Mission Mangal was createdwhere Indian actress Vidya Balan did her role."
+//     {
+//       id: 1,
+//       name: "Kalpana Chawla",
+//       img : image1,
+//       description:"Kalpana Chawla was an indian born American astronautand aerospace engineer who was the first women of india originto fly to space . she first flew on space shuttle columbia in1997 as a mission specialist and primary robotic arm operator aboard STS-87.Kalpana Chawla was an indian born American astronautand aerospace engineer who was the first women of india originto fly to space Kalpana Chawla was an indian born American astronautand aerospace engineer who was the first women of india originto fly to space"
+//     },
 
-    },
+//     {
+//       id: 2,
+//       name: "Ritu Karidhal",
+//       img : image2,
+//       description: "Ritu Karidhal Srivastava is an Indian scientist and aerospace engineer working in the Indian Space Research Organisation(ISRO).She was a Deputy Operations Director to India's Mars orbitalmission, Mangalyaan.She has been referred to as one of the many Rocket Womem of India.Giving tribute to her excellence in Mangalayaan mission, a Bollywood film Mission Mangal was createdwhere Indian actress Vidya Balan did her role."
 
-    {
-      id:3,
-      name:" Sirisha Bandla",
-      img:image3,
-      description:"Sirisha Bandla is an Indian-American aeronautical engineer and space tourist.[2] She is the Vice President of Government Affairs and Research Operations for Virgin Galactic.[3] She flew on the Virgin Galactic Unity 22 mission which made her the second India-born woman to go to space and the fourth person of Indian descent ever to go past the line of space after Rakesh Sharma, Kalpana Chawla and Sunita Williams"
-    }
+//     },
 
-    // {
-    //   id:4,
-    //   name:"Reetha Mathew",
-    //   img:"https://th.bing.com/th/id/OIP.8eJNMEsDP4uYuV4dl--i9gHaE8?w=356&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-    // },
+//     {
+//       id:3,
+//       name:" Sirisha Bandla",
+//       img:image3,
+//       description:"Sirisha Bandla is an Indian-American aeronautical engineer and space tourist.[2] She is the Vice President of Government Affairs and Research Operations for Virgin Galactic.[3] She flew on the Virgin Galactic Unity 22 mission which made her the second India-born woman to go to space and the fourth person of Indian descent ever to go past the line of space after Rakesh Sharma, Kalpana Chawla and Sunita Williams"
+//     }
 
-    // {
-    //   id:5,
-    //   name:"Reetha Mathew",
-    //   img:"https://th.bing.com/th/id/OIP.8eJNMEsDP4uYuV4dl--i9gHaE8?w=356&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-    // },
+//     {
+//       id:4,
+//       name:"Reetha Mathew",
+//       img:"https://th.bing.com/th/id/OIP.8eJNMEsDP4uYuV4dl--i9gHaE8?w=356&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+//     },
 
-    // {
-    //   id:6,
-    //   name:"Reetha Mathew",
-    //   img:"https://th.bing.com/th/id/OIP.8eJNMEsDP4uYuV4dl--i9gHaE8?w=356&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-    // }
-  ]
+//     {
+//       id:5,
+//       name:"Reetha Mathew",
+//       img:"https://th.bing.com/th/id/OIP.8eJNMEsDP4uYuV4dl--i9gHaE8?w=356&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+//     },
+
+//     {
+//       id:6,
+//       name:"Reetha Mathew",
+//       img:"https://th.bing.com/th/id/OIP.8eJNMEsDP4uYuV4dl--i9gHaE8?w=356&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+//     }
+// ]
   return (
     <div className="App">
       <header className="App-header">
@@ -98,7 +128,7 @@ function App() {
        <Proj2 data={data} 
        */}
        { <div>
-        <form onSubmit={handlessubmit} action="">
+        {/* <form onSubmit={handlessubmit} action="">
         <label htmlFor="">name</label> 
         <input type="text"
         onChange={(e)=>setName(e.target.value)}
@@ -107,19 +137,38 @@ function App() {
         <input type="text"
         onChange={(e)=>setAge(e.target.value)}></input>
         <input type="submit"/>
-        </form>
+        </form> */}
+      
 
-    </div>
-    }
+
+ 
+   
+
+
+
+
+        
+
+      </div>
+  }
+  
     {/* <button onClick={()=>setNumber(number+1)}>increment</button>
     <button onClick={()=>setNumber(number-1)}>decrement</button>
     {number}
         */}
+          <h1>count = {count}</h1>
+           <button onClick={()=>setcount((count)=>count+1)}>+</button>
+           <h1>calculation ={calculation}</h1>
+      
+
+
+
        
     </div>
    
 
   );
 }
+
 
 export default App;

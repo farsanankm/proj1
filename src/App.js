@@ -47,13 +47,13 @@ import { useEffect } from 'react';
   // const [number, setNumber]=useState(0)
   // console.log(number);
   function App(){
-    // const[count,setcount]=useState(0);
-    // useEffect(()=>{
-    //     setTimeout(()=>{
-    //         setcount((count)=>count+1);
+    const[count,setcount]=useState(0);
+    useEffect(()=>{
+        setTimeout(()=>{
+            setcount((count)=>count+1);
 
-    //     },1000);
-    // },[]);
+        },1000);
+    },[]);
     const[count,setcount]=useState(0);
     const[calculation,setcalculation]=useState(0);
     useEffect(()=>{
